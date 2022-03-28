@@ -1,0 +1,6 @@
+[attr]generated -diff -merge
+
+*	text=auto
+
+.yarn/* generated
+yarn.lock generated
