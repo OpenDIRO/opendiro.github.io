@@ -181,3 +181,12 @@ dist
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/node,yarn,visualstudiocode
+
+
+## Remix
+/.cache
+/build
+/dist
+/public/build
+/.mf
+.env
