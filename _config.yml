@@ -19,8 +19,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   We are OpenDIRO. More to come
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://opendiro.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  OpenDIRO
+source: src
 
+github_username:  OpenDIRO
 # Build settings
 markdown: kramdown
 theme: minima
