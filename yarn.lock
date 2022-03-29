@@ -1188,6 +1188,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/web@npm:^0.0.60":
+  version: 0.0.60
+  resolution: "@types/web@npm:0.0.60"
+  checksum: 5b1dd84fe9b7c6c450ab3d3cc336f4df37d8c672b7e6a88dc13d23114c5c8dde1690e329fc9eddd49ada457ea53173522f48c9e1aebdd55d6294d36586670903
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/eslint-plugin@npm:^5.12.1":
   version: 5.17.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.17.0"
@@ -6177,6 +6184,7 @@ __metadata:
     "@types/react": ^17.0.43
     "@types/react-dom": ^17.0.14
     "@types/rimraf": ^3
+    "@types/web": ^0.0.60
     cross-env: ^7.0.3
     eslint: ^8.12.0
     npm-run-all: ^4.1.5
