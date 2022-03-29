@@ -190,3 +190,6 @@ dist
 /public/build
 /.mf
 .env
+
+## Cloudflare Pages
+functions/*
