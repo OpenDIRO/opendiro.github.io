@@ -13,6 +13,7 @@
     "postinstall:patches:remix-cloudflare": "remix setup cloudflare",
     "postinstall:finalise": "yarn --mode=skip-build",
     "postinstall": "run-s 'postinstall:patches:*' 'postinstall:finalise'",
+    "clean:tsc": "rimraf .build/",
     "clean:remix": "rimraf functions/ .cache/ public/static/",
     "clean": "run-p 'clean:*'",
     "fullclean:clean": "run-p 'clean'",
