@@ -9,8 +9,16 @@
     "dev:remix": "remix watch",
     "dev:wrangler": "cross-env NODE_ENV=development wrangler pages dev ./public",
     "dev": "yarn build && run-p 'dev:*'",
-    "postinstall": "remix setup cloudflare",
-    "start": "cross-env NODE_ENV=production npm run dev:wrangler"
+    "start": "cross-env NODE_ENV=production npm run dev:wrangler",
+    "postinstall:patches:remix-cloudflare": "remix setup cloudflare",
+    "postinstall:finalise": "yarn --mode=skip-build",
+    "postinstall": "run-s 'postinstall:patches:*' 'postinstall:finalise'",
+    "clean:remix": "rimraf functions/ .cache/ public/static/",
+    "clean": "run-p 'clean:*'",
+    "fullclean:clean": "run-p 'clean'",
+    "postfullclean": "rimraf '.yarn/cache/' '.yarn/install-state.gz' 'node_modules'",
+    "fullclean": "run-s 'fullclean:*' 'postfullclean'",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@remix-run/cloudflare-pages": "^1.3.3",
@@ -25,8 +33,12 @@
     "@remix-run/dev": "^1.3.3",
     "@remix-run/eslint-config": "^1.3.3",
     "@remix-run/serve": "^1.3.3",
+    "@types/react": "^17.0.43",
+    "@types/react-dom": "^17.0.14",
+    "@types/rimraf": "^3",
     "eslint": "^8.12.0",
     "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
     "typescript": "^4.6.3",
     "wrangler": "beta"
   },

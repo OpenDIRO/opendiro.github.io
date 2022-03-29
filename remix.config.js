@@ -5,9 +5,8 @@ module.exports = {
   serverBuildTarget: "cloudflare-pages",
   server: "./src/server/index.ts",
   devServerBroadcastDelay: 1000,
-  ignoredRouteFiles: [".*"],
+  ignoredRouteFiles: ["!*.tsx", ".*"],
   appDirectory: "src/app",
-  // assetsBuildDirectory: "public/build",
-  // serverBuildPath: "build/server/index.js",
+  assetsBuildDirectory: "public/static",
   publicPath: "/static/",
 };
